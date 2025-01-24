@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza", "..\..\C#\Pizza\Piz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsInheretince practice", "WindowsFormsInheretince practice\WindowsFormsInheretince practice.csproj", "{97E6E632-7C21-4DE9-B2E5-F340C1001A41}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "object oriented program", "object oriented program\object oriented program.vcxproj", "{0E2C5798-E4D8-4B13-B9D9-90902761503D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "object oriented program", "Banking system using OOPs\object oriented program.vcxproj", "{0E2C5798-E4D8-4B13-B9D9-90902761503D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
