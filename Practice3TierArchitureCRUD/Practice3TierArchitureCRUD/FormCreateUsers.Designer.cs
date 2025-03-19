@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
@@ -37,6 +38,9 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.labelWorningUsers = new System.Windows.Forms.Label();
+            this.TimerFlashWarning = new System.Windows.Forms.Timer(this.components);
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -65,6 +69,7 @@
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(188, 24);
             this.textBoxUserName.TabIndex = 0;
+            this.textBoxUserName.TextChanged += new System.EventHandler(this.textBoxUserName_TextChanged);
             // 
             // textBoxPassword
             // 
@@ -103,10 +108,10 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(398, 194);
+            this.buttonClose.Location = new System.Drawing.Point(294, 256);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(82, 46);
-            this.buttonClose.TabIndex = 4;
+            this.buttonClose.TabIndex = 5;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
@@ -121,11 +126,37 @@
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // labelWorningUsers
+            // 
+            this.labelWorningUsers.AutoSize = true;
+            this.labelWorningUsers.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWorningUsers.Location = new System.Drawing.Point(382, 98);
+            this.labelWorningUsers.Name = "labelWorningUsers";
+            this.labelWorningUsers.Size = new System.Drawing.Size(16, 21);
+            this.labelWorningUsers.TabIndex = 6;
+            this.labelWorningUsers.Text = "!";
+            // 
+            // TimerFlashWarning
+            // 
+            this.TimerFlashWarning.Interval = 500;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(188, 256);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(82, 46);
+            this.buttonDelete.TabIndex = 4;
+            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
             // FormCreateUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonDelete);
+            this.Controls.Add(this.labelWorningUsers);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonSave);
@@ -153,5 +184,8 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Label labelWorningUsers;
+        private System.Windows.Forms.Timer TimerFlashWarning;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }

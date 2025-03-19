@@ -1,10 +1,12 @@
 ﻿using DAL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace BAL
 {
@@ -32,6 +34,21 @@ namespace BAL
         {
             this.UserID = clsUsersD.AddUser(this.UserName, this.Password);
         }
+
+        public static bool  find(string UserName)
+        {
+            return clsUsersD.FindUser(UserName); 
+        }
+        public static bool Delete(string UserName)
+        {
+            return clsUsersD.DeleteUser(UserName);
+        }
+
+        public static DataTable GetUsers()
+        {
+            return clsUsersD.GetAllUsers();
+        }
+
 
     }
 
