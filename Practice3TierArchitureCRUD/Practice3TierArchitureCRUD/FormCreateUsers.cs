@@ -15,20 +15,40 @@ namespace Practice3TierArchitureCRUD
 {
     public partial class FormCreateUsers : Form
     {
-        public FormCreateUsers()
+      public  enum enMode { AddMode = 0 , UpdateMode =1 };
+        private enMode _Mode; 
+        int _UserID = 0;
+        clsUsersB _User;
+        public FormCreateUsers(int UserID)
         {
             
             InitializeComponent();
-          
+          _UserID = UserID;
+            if (UserID == -1)
+            {
+                _Mode = enMode.AddMode;
+            }
+            else
+            {
+                _Mode = enMode.UpdateMode;
+            }
 
         }
         MainForm mainForm = new MainForm();
 
         private void _AssignData()
         {
-            clsUsersB users = new clsUsersB(textBoxUserName.Text , textBoxPassword.Text);
+            clsUsersB users = new clsUsersB(textBoxUserName.Text, textBoxPassword.Text);
+            if (_Mode == enMode.AddMode)
+            {
 
-            users.AddUsers(); 
+
+                users.AddUsers();
+            }
+            else
+            {
+                users.UpdateData();
+            }
 
             labelUserNumber.Text = users.UserID.ToString();
             if (users.UserID != 0)
@@ -66,14 +86,9 @@ namespace Practice3TierArchitureCRUD
         public event Action UserAdded; 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            
-            
+         
                 _AssignData();
-            UserAdded?.Invoke(); 
-            
-
-
-
+           
 
         }
 
@@ -121,6 +136,34 @@ namespace Practice3TierArchitureCRUD
             MessageBox.Show("User " + textBoxUserName.Text + " is successfully  Deleted");
             textBoxUserName.Clear();
             textBoxUserName.Focus();
+        }
+        private void _LoadData()
+        {
+            if (_Mode == enMode.AddMode)
+            {
+                labelTitleAddEdit.Text = "Add New Users";
+                _User = new clsUsersB();
+                return; 
+            }
+            _User = clsUsersB.FindID(_UserID);
+            if (_User == null)
+            {
+                MessageBox.Show("The data is not in the system ");
+                this.Close();
+                return;
+            }
+
+            labelTitleAddEdit.Text = "Edit Users"; 
+            labelUserNumber.Text = _UserID.ToString();
+            textBoxUserName.Text = _User.UserName;
+            textBoxPassword.Text = _User.Password;
+
+        }
+
+        private void FormCreateUsers_Load(object sender, EventArgs e)
+        {
+            _LoadData();
+
         }
     }
 }

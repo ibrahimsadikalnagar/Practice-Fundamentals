@@ -105,6 +105,58 @@ namespace DAL
             return dt;
         }
 
+        public static bool UpdateUsers(int UserID , string UserName , string Password)
+        {
+            int RowEffected =  0;   
+
+            SqlConnection conn = new SqlConnection(ClassConnections.ConnectDataUser);
+            string query = "Update Users set UserName = @UserName , Password = @Password " +
+                "where UserID = @UserID"; 
+            SqlCommand cmd = new SqlCommand(@query, conn);
+            cmd.Parameters.AddWithValue("@UserID" , UserID);
+            cmd.Parameters.AddWithValue("@UserName", UserName); 
+            cmd.Parameters.AddWithValue("@Password" , Password);
+            try
+            {
+                conn.Open();
+                RowEffected = cmd.ExecuteNonQuery();
+                
+              
+            }
+            catch (Exception ex)
+            { }
+            finally
+            { conn.Close(); }
+            return RowEffected > 0;
+
+        }
+        public static bool GetUserById(int UserID, ref string UserName, ref string Password)
+        {
+            bool isFound = false;
+            SqlConnection conn = new SqlConnection(ClassConnections.ConnectDataUser);
+            string query = "Select * from Users where UserID = @UserID";
+            SqlCommand command = new SqlCommand(@query, conn);
+            command.Parameters.AddWithValue("@UserID" , UserID );   
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    isFound = true;
+                    UserName = (string)reader["UserName"];
+                    Password = (string)reader["Password"];
+                }
+                else
+                {
+                    isFound = false;
+                }
+            }
+            catch (Exception ex) { }
+            finally { conn.Close(); }
+            return isFound;
+
+        }
 
     }
     

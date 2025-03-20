@@ -41,13 +41,14 @@
             this.labelWorningUsers = new System.Windows.Forms.Label();
             this.TimerFlashWarning = new System.Windows.Forms.Timer(this.components);
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.labelTitleAddEdit = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 98);
+            this.label1.Location = new System.Drawing.Point(112, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 24);
             this.label1.TabIndex = 0;
@@ -57,7 +58,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 144);
+            this.label2.Location = new System.Drawing.Point(112, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 24);
             this.label2.TabIndex = 1;
@@ -65,7 +66,7 @@
             // 
             // textBoxUserName
             // 
-            this.textBoxUserName.Location = new System.Drawing.Point(188, 97);
+            this.textBoxUserName.Location = new System.Drawing.Point(287, 142);
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(188, 24);
             this.textBoxUserName.TabIndex = 0;
@@ -73,7 +74,7 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(188, 144);
+            this.textBoxPassword.Location = new System.Drawing.Point(287, 189);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(188, 24);
             this.textBoxPassword.TabIndex = 1;
@@ -98,7 +99,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(188, 194);
+            this.buttonSave.Location = new System.Drawing.Point(287, 239);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(82, 46);
             this.buttonSave.TabIndex = 2;
@@ -108,7 +109,7 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(294, 256);
+            this.buttonClose.Location = new System.Drawing.Point(393, 301);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(82, 46);
             this.buttonClose.TabIndex = 5;
@@ -118,7 +119,7 @@
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(294, 194);
+            this.buttonClear.Location = new System.Drawing.Point(393, 239);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(82, 46);
             this.buttonClear.TabIndex = 3;
@@ -130,7 +131,7 @@
             // 
             this.labelWorningUsers.AutoSize = true;
             this.labelWorningUsers.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWorningUsers.Location = new System.Drawing.Point(382, 98);
+            this.labelWorningUsers.Location = new System.Drawing.Point(481, 143);
             this.labelWorningUsers.Name = "labelWorningUsers";
             this.labelWorningUsers.Size = new System.Drawing.Size(16, 21);
             this.labelWorningUsers.TabIndex = 6;
@@ -142,7 +143,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(188, 256);
+            this.buttonDelete.Location = new System.Drawing.Point(287, 301);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(82, 46);
             this.buttonDelete.TabIndex = 4;
@@ -150,11 +151,22 @@
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
+            // labelTitleAddEdit
+            // 
+            this.labelTitleAddEdit.AutoSize = true;
+            this.labelTitleAddEdit.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleAddEdit.Location = new System.Drawing.Point(281, 25);
+            this.labelTitleAddEdit.Name = "labelTitleAddEdit";
+            this.labelTitleAddEdit.Size = new System.Drawing.Size(47, 34);
+            this.labelTitleAddEdit.TabIndex = 7;
+            this.labelTitleAddEdit.Text = "??";
+            // 
             // FormCreateUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(731, 450);
+            this.Controls.Add(this.labelTitleAddEdit);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.labelWorningUsers);
             this.Controls.Add(this.buttonClear);
@@ -168,6 +180,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormCreateUsers";
             this.Text = "FormCreateUsers";
+            this.Load += new System.EventHandler(this.FormCreateUsers_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +200,6 @@
         private System.Windows.Forms.Label labelWorningUsers;
         private System.Windows.Forms.Timer TimerFlashWarning;
         private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Label labelTitleAddEdit;
     }
 }

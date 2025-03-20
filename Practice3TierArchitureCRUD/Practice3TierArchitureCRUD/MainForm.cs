@@ -20,7 +20,7 @@ namespace Practice3TierArchitureCRUD
 
         private void buttonAddUser_Click(object sender, EventArgs e)
         {
-            FormCreateUsers formCreateUsers = new FormCreateUsers();
+            FormCreateUsers formCreateUsers = new FormCreateUsers(-1);
             formCreateUsers.UserAdded += LoadUsers;
             formCreateUsers.ShowDialog();
         }
@@ -55,6 +55,12 @@ namespace Practice3TierArchitureCRUD
         private void MainForm_Load(object sender, EventArgs e)
         {
            LoadUsers();
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCreateUsers users = new FormCreateUsers((int)dataGridViewUsers.CurrentRow.Cells[0].Value);
+            users.ShowDialog();
         }
     }
 }
