@@ -62,5 +62,11 @@ namespace Practice3TierArchitureCRUD
             FormCreateUsers users = new FormCreateUsers((int)dataGridViewUsers.CurrentRow.Cells[0].Value);
             users.ShowDialog();
         }
+
+        private void buttonShowCountry_Click(object sender, EventArgs e)
+        {
+            FormCountry FrmCountry = new FormCountry(); 
+            FrmCountry.ShowDialog();
+        }
     }
 }

@@ -38,7 +38,7 @@ namespace Practice3TierArchitureCRUD
 
         private void _AssignData()
         {
-            clsUsersB users = new clsUsersB(textBoxUserName.Text, textBoxPassword.Text);
+            clsUsersB users = new clsUsersB(_UserID , textBoxUserName.Text, textBoxPassword.Text);
             if (_Mode == enMode.AddMode)
             {
 

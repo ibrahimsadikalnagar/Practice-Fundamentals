@@ -35,6 +35,7 @@
             this.contextMenuStripEditDelete = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonShowCountry = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.contextMenuStripEditDelete.SuspendLayout();
@@ -67,6 +68,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonShowCountry);
             this.groupBox1.Controls.Add(this.buttonAddUser);
             this.groupBox1.Location = new System.Drawing.Point(-5, 48);
             this.groupBox1.Name = "groupBox1";
@@ -81,12 +83,12 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStripEditDelete.Name = "contextMenuStripEditDelete";
-            this.contextMenuStripEditDelete.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStripEditDelete.Size = new System.Drawing.Size(123, 52);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -96,6 +98,16 @@
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // buttonShowCountry
+            // 
+            this.buttonShowCountry.Location = new System.Drawing.Point(533, 23);
+            this.buttonShowCountry.Name = "buttonShowCountry";
+            this.buttonShowCountry.Size = new System.Drawing.Size(108, 50);
+            this.buttonShowCountry.TabIndex = 1;
+            this.buttonShowCountry.Text = "Show Country";
+            this.buttonShowCountry.UseVisualStyleBackColor = true;
+            this.buttonShowCountry.Click += new System.EventHandler(this.buttonShowCountry_Click);
             // 
             // MainForm
             // 
@@ -122,6 +134,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStripEditDelete;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.Button buttonShowCountry;
     }
 }
 

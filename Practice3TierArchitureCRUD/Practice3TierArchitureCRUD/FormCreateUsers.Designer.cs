@@ -130,10 +130,10 @@
             // labelWorningUsers
             // 
             this.labelWorningUsers.AutoSize = true;
-            this.labelWorningUsers.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWorningUsers.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWorningUsers.Location = new System.Drawing.Point(481, 143);
             this.labelWorningUsers.Name = "labelWorningUsers";
-            this.labelWorningUsers.Size = new System.Drawing.Size(16, 21);
+            this.labelWorningUsers.Size = new System.Drawing.Size(13, 18);
             this.labelWorningUsers.TabIndex = 6;
             this.labelWorningUsers.Text = "!";
             // 
@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 450);
+            this.ClientSize = new System.Drawing.Size(784, 450);
             this.Controls.Add(this.labelTitleAddEdit);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.labelWorningUsers);

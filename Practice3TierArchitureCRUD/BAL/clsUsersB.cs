@@ -24,9 +24,9 @@ namespace BAL
             Password = ""; 
 
         }
-        public clsUsersB( string userName, string password)
+        public clsUsersB(int userId,  string userName, string password)
         {
-           
+            UserID = userId; 
             UserName = userName;
             Password = password;
         }
@@ -58,7 +58,7 @@ namespace BAL
         {
             string UserName = "", Password = "";
             if (clsUsersD.GetUserById(UserID, ref UserName, ref Password))
-                return new clsUsersB(UserName, Password);
+                return new clsUsersB(UserID , UserName, Password);
             else return null;
         }
 
