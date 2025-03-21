@@ -13,6 +13,7 @@ namespace Practice3TierArchitureCRUD
 {
     public partial class FormCountry : Form
     {
+        private DataGridViewRow SelectedRow; 
         public FormCountry()
         {
             InitializeComponent();
@@ -41,26 +42,35 @@ namespace Practice3TierArchitureCRUD
            
                 if(dataGridView1.SelectedRows.Count > 0)
                 {
-                    DataGridViewRow row = dataGridView1.SelectedRows[0];
+                    SelectedRow = dataGridView1.SelectedRows[0];
+                   
                     labelCountryTitle.Text = "Edit Mode";
-                    labelCountryNo.Text = row.Cells["CountryID"].Value.ToString();
-                    textBoxCountryName.Text = row.Cells["CountryName"].Value.ToString();
+                    labelCountryNo.Text = SelectedRow.Cells["CountryID"].Value.ToString();
+                    textBoxCountryName.Text = SelectedRow.Cells["CountryName"].Value.ToString();
                 }
+                else
+            {
+                MessageBox.Show("Please Select the Complate row to be able to Edit or Delete the record"); 
+            }
                 
             
         }
         private void _AssignSelectedDataFromGrid()
         {
-            DataGridViewRow row = dataGridView1.SelectedRows[0];
+            
 
             clsCountryB clsCountryB = new clsCountryB
             {
-                CountryID = Convert.ToInt32(row.Cells["CountryID"].Value),
+                CountryID = Convert.ToInt32(SelectedRow.Cells["CountryID"].Value),
                 CountryName = textBoxCountryName.Text,
             };
             if (clsCountryB.Update())
             {
                 MessageBox.Show("Update sucssefull");
+            }
+            else
+            {
+                MessageBox.Show("Update is not successfully ");
             }
         }
         private void buttonSave_Click(object sender, EventArgs e)
