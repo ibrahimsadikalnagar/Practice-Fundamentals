@@ -25,5 +25,12 @@ namespace BAL
         {
             return clsCountryD.UpdateCountry(this.CountryID, this.CountryName);
         }
+        public  bool AddCountry(string countryName)
+        {
+          this.CountryID = clsCountryD.AddCountries(countryName);
+            if(this.CountryID > 0) 
+                return true;
+            else return false;
+        }
     }
 }

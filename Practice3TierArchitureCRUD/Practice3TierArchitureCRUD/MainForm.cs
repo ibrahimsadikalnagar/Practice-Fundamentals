@@ -65,7 +65,7 @@ namespace Practice3TierArchitureCRUD
 
         private void buttonShowCountry_Click(object sender, EventArgs e)
         {
-            FormCountry FrmCountry = new FormCountry(); 
+            FormCountry FrmCountry = new FormCountry(-1); 
             FrmCountry.ShowDialog();
         }
     }

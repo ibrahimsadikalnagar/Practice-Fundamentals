@@ -63,5 +63,35 @@ namespace DAL
 
 
         }
+        public static int AddCountries(string CountryName)
+        {
+            int CountryID = 0;
+            SqlConnection Conn = new SqlConnection(ClassConnections.ConnectDataUser);
+            string query = "Insert into Countries (CountryName ) " +
+                "Values (@CountryName) SELECT SCOPE_IDENTITY()";
+            SqlCommand cmd = new SqlCommand(query, Conn);
+            cmd.Parameters.AddWithValue("@CountryName" , CountryName );
+            try
+            {
+                Conn.Open();
+                object result = cmd.ExecuteScalar();
+
+
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    CountryID = insertedID;
+                }
+
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            { Conn.Close(); }
+
+            return CountryID;
+        }
+
+        
     }
 }

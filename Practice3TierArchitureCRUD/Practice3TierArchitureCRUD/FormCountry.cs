@@ -13,10 +13,15 @@ namespace Practice3TierArchitureCRUD
 {
     public partial class FormCountry : Form
     {
-        private DataGridViewRow SelectedRow; 
-        public FormCountry()
+        private DataGridViewRow SelectedRow;
+        clsCountryB clsCountryB = new clsCountryB();
+        public FormCountry(int CountryID)
         {
+            
             InitializeComponent();
+            clsCountryB.CountryID = CountryID;
+            labelCountryNo.Text = clsCountryB.CountryID.ToString();
+            labelCountryTitle.Text = "Insert Mode"; 
         }
 
         private void _RefreshDataGride()
@@ -57,26 +62,44 @@ namespace Practice3TierArchitureCRUD
         }
         private void _AssignSelectedDataFromGrid()
         {
-            
 
-            clsCountryB clsCountryB = new clsCountryB
+
+
+            if (clsCountryB.CountryID > 0)
             {
-                CountryID = Convert.ToInt32(SelectedRow.Cells["CountryID"].Value),
-                CountryName = textBoxCountryName.Text,
-            };
-            if (clsCountryB.Update())
-            {
-                MessageBox.Show("Update sucssefull");
+               /* clsCountryB.CountryID = Convert.ToInt32(SelectedRow.Cells["CountryID"].Value);
+                clsCountryB.CountryName = textBoxCountryName.Text;*/
+
+                if (clsCountryB.Update())
+                {
+                    MessageBox.Show("Update sucssefull");
+                }
+                else
+                {
+                    MessageBox.Show("Update is not successfully ");
+                }
             }
             else
             {
-                MessageBox.Show("Update is not successfully ");
+                
+                if (clsCountryB.AddCountry(clsCountryB.CountryName))
+                {
+                    MessageBox.Show("Saved successfully");
+                }
+
+                   
+                else
+                    MessageBox.Show("Not saved "); 
             }
         }
+       
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            _AssignSelectedDataFromGrid();
-            _RefreshDataGride() ;
+           clsCountryB.CountryID = Convert.ToInt32( labelCountryNo.Text);
+            clsCountryB.CountryName = textBoxCountryName.Text;
+                _AssignSelectedDataFromGrid();
+                _RefreshDataGride();
+            
         }
     }
 }
