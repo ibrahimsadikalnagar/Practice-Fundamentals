@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "BAL\BAL.csproj", "{132B789C-A387-4876-B5E1-0724B259CFA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeGeneratorforDAL", "CodeGeneratorforDAL\CodeGeneratorforDAL.csproj", "{50957B9D-A171-40D7-99E6-66E73C9A3059}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeOnly", "PracticeOnly\PracticeOnly.csproj", "{3754AF4C-02F4-44A6-BB51-99A9AD0D5920}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{132B789C-A387-4876-B5E1-0724B259CFA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{132B789C-A387-4876-B5E1-0724B259CFA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{132B789C-A387-4876-B5E1-0724B259CFA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50957B9D-A171-40D7-99E6-66E73C9A3059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50957B9D-A171-40D7-99E6-66E73C9A3059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50957B9D-A171-40D7-99E6-66E73C9A3059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50957B9D-A171-40D7-99E6-66E73C9A3059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3754AF4C-02F4-44A6-BB51-99A9AD0D5920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3754AF4C-02F4-44A6-BB51-99A9AD0D5920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3754AF4C-02F4-44A6-BB51-99A9AD0D5920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3754AF4C-02F4-44A6-BB51-99A9AD0D5920}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
