@@ -56,5 +56,25 @@ namespace PracticeOnly
             }
           
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            int numbers;
+            if (int.TryParse(textBoxForm1.Text, out numbers))
+            {
+                Form2 frm2 = new Form2(numbers);
+                frm2.DelegateBack += Form2_DataBack;
+                frm2.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid interger "); 
+            }
+        }
+        private void Form2_DataBack(object sender , int PersonID)
+        {
+            textBoxForm1.Text = PersonID.ToString();
+        }
     }
 }
