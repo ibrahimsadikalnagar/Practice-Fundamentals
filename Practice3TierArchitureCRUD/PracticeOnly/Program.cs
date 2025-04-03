@@ -18,21 +18,13 @@ namespace PracticeOnly
         static void Main(string[] args)
         {
 
-            Del trsnlator = new Del(GreatingDutch);
-            string result = trsnlator.Invoke("Hello ales "); 
-            Console.WriteLine(result);
-            Console.ReadKey();
-       
+            FormDelegate fD = new FormDelegate();
+            fD.ShowDialog();
+                
+
         }
        
-        public static  string GreatingDutch(string GreatingDutch)
-        {
-            return GreatingDutch; 
-        }
-        private string GreatingEnglish(string GreatingEnglish)
-        {
-            return "Hello";
-        }
+      
 
       
 

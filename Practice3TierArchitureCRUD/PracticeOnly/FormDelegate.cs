@@ -14,13 +14,15 @@ namespace PracticeOnly
 {
     public partial class FormDelegate : Form
     {
+        UserControlCountry UserControlCountry1;
         
 
         public FormDelegate()
         {
             InitializeComponent();
 
-
+            UserControlCountry1 = new UserControlCountry(); 
+            this.Controls.Add(UserControlCountry1);
         }
         private void buttonDelegate_Click(object sender, EventArgs e)
         {
@@ -40,6 +42,10 @@ namespace PracticeOnly
         {
             textBoxForm1.Text = Name;
         }
-        
+
+        private void FormDelegate_Load(object sender, EventArgs e)
+        {
+            UserControlCountry1.LoadCountryData(); 
+        }
     }
 }
