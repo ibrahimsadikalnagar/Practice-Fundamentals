@@ -28,36 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelForm2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDataReturn = new System.Windows.Forms.TextBox();
             this.buttonSendBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // labelForm2
+            // textBoxDataReturn
             // 
-            this.labelForm2.AutoSize = true;
-            this.labelForm2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelForm2.Location = new System.Drawing.Point(368, 60);
-            this.labelForm2.Name = "labelForm2";
-            this.labelForm2.Size = new System.Drawing.Size(64, 24);
-            this.labelForm2.TabIndex = 0;
-            this.labelForm2.Text = "label1";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(372, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 24);
-            this.textBox1.TabIndex = 1;
+            this.textBoxDataReturn.Location = new System.Drawing.Point(271, 116);
+            this.textBoxDataReturn.Name = "textBoxDataReturn";
+            this.textBoxDataReturn.Size = new System.Drawing.Size(162, 24);
+            this.textBoxDataReturn.TabIndex = 1;
             // 
             // buttonSendBack
             // 
-            this.buttonSendBack.Location = new System.Drawing.Point(548, 116);
+            this.buttonSendBack.Location = new System.Drawing.Point(271, 166);
             this.buttonSendBack.Name = "buttonSendBack";
-            this.buttonSendBack.Size = new System.Drawing.Size(118, 81);
+            this.buttonSendBack.Size = new System.Drawing.Size(162, 44);
             this.buttonSendBack.TabIndex = 2;
-            this.buttonSendBack.Text = "button1";
+            this.buttonSendBack.Text = "Close and return Data";
             this.buttonSendBack.UseVisualStyleBackColor = true;
+            this.buttonSendBack.Click += new System.EventHandler(this.buttonSendBack_Click);
             // 
             // Form2
             // 
@@ -65,8 +55,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonSendBack);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.labelForm2);
+            this.Controls.Add(this.textBoxDataReturn);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -76,9 +65,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelForm2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDataReturn;
         private System.Windows.Forms.Button buttonSendBack;
     }
 }

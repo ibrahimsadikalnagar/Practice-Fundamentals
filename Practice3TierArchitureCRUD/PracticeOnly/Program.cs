@@ -4,23 +4,34 @@ using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PracticeOnly
 {
+     delegate string Del(string G); 
+    
+   
     internal class Program
     {
+      
        
         static void Main(string[] args)
         {
-            /*CalculateDelegate dlg = CalculateTwoNumber;
-            WelcomeDelegate WDlg = WelcomeMessage;
-           
-            Console.WriteLine(dlg(13,2));
-            WDlg("Hoi");
-            WDlg("gddgdg"); 
-            Console.ReadLine();*/
-            FormDelegate formDelegate = new FormDelegate();
-            formDelegate.ShowDialog();
+
+            Del trsnlator = new Del(GreatingDutch);
+            string result = trsnlator.Invoke("Hello ales "); 
+            Console.WriteLine(result);
+            Console.ReadKey();
+       
+        }
+       
+        public static  string GreatingDutch(string GreatingDutch)
+        {
+            return GreatingDutch; 
+        }
+        private string GreatingEnglish(string GreatingEnglish)
+        {
+            return "Hello";
         }
 
       

@@ -12,19 +12,36 @@ namespace PracticeOnly
 {
     public partial class Form2 : Form
     {
-        public delegate void DelegateBackHandler(object sender, int PersonID);
 
-        public event DelegateBackHandler DelegateBack;
-        public int Numbers { get; set; }    
-        public Form2(int numbers)
+        public delegate void  GetDataBackDelegate(object sender , int PersonID);
+       public event GetDataBackDelegate Delegate1;
+        public delegate void anotherDataBackDelegate(string PersonName); 
+        public event anotherDataBackDelegate Delegate2;
+        public Form2()
         {
             InitializeComponent();
-            Numbers = numbers;
+            
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            labelForm2.Text = Numbers.ToString();
+            
         }
+
+        private void buttonSendBack_Click(object sender, EventArgs e)
+        {
+            /*int PersonID = 0;
+            if (int.TryParse(textBoxDataReturn.Text, out PersonID))
+            {
+                Delegate1?.Invoke(this, PersonID);
+            }*/
+
+            Delegate2?.Invoke(textBoxDataReturn.Text);
+            
+            Close();
+;
+        }
+
+      
     }
 }
