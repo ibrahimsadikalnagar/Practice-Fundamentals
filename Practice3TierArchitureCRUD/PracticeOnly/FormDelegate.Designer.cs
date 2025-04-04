@@ -52,9 +52,9 @@
             // 
             // userControlCountry1
             // 
-            this.userControlCountry1.Location = new System.Drawing.Point(82, 144);
+            this.userControlCountry1.Location = new System.Drawing.Point(203, 170);
             this.userControlCountry1.Name = "userControlCountry1";
-            this.userControlCountry1.Size = new System.Drawing.Size(317, 85);
+            this.userControlCountry1.Size = new System.Drawing.Size(317, 131);
             this.userControlCountry1.TabIndex = 5;
             // 
             // FormDelegate

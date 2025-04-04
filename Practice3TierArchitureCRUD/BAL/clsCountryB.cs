@@ -36,6 +36,12 @@ namespace BAL
         {
             return clsCountryD.FindCountryById(countryID);
         }
+        public static int FindCounty(string countryName)
+        {
+            {
+                return clsCountryD.FindCountryByName(countryName);
+            }
+        }
     }
 
  

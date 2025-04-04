@@ -115,7 +115,39 @@ namespace DAL
 
             return CountryName; 
         }
+        public static int FindCountryByName(string CountryName ) 
+        {
+            int CountryID = 0;
+            SqlConnection Conn = new SqlConnection(ClassConnections.ConnectDataUser);
+            string query = "select CountryID from Countries where CountryName = @CountryName"; 
+            SqlCommand sqlCommand = new SqlCommand( query, Conn);
+            sqlCommand.Parameters.AddWithValue("@CountryName", CountryName );
+            try
+            {
+                Conn.Open();
+                object result = sqlCommand.ExecuteScalar();
+                if (result != null && (int.TryParse(result.ToString(), out int ID)))
+                {
+                    CountryID = ID;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log or show error
+               
+            }
+            finally
+            {
+                Conn.Close();
+            }
 
+            return CountryID;
+
+
+
+
+
+        }
         
     }
 }

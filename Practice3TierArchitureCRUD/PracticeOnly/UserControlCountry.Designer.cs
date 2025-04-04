@@ -33,6 +33,8 @@
             this.textBoxCountryID = new System.Windows.Forms.TextBox();
             this.textBoxCountryName = new System.Windows.Forms.TextBox();
             this.labelFind = new System.Windows.Forms.Label();
+            this.Search = new System.Windows.Forms.Button();
+            this.comboBoxSearchType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // labelID
@@ -70,23 +72,48 @@
             // labelFind
             // 
             this.labelFind.AutoSize = true;
-            this.labelFind.Location = new System.Drawing.Point(4, 10);
+            this.labelFind.Location = new System.Drawing.Point(15, 17);
             this.labelFind.Name = "labelFind";
-            this.labelFind.Size = new System.Drawing.Size(75, 17);
+            this.labelFind.Size = new System.Drawing.Size(53, 17);
             this.labelFind.TabIndex = 4;
-            this.labelFind.Text = "Find By ID ";
+            this.labelFind.Text = "Find by";
+            // 
+            // Search
+            // 
+            this.Search.Location = new System.Drawing.Point(108, 102);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(87, 37);
+            this.Search.TabIndex = 5;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
+            // 
+            // comboBoxSearchType
+            // 
+            this.comboBoxSearchType.FormattingEnabled = true;
+            this.comboBoxSearchType.Items.AddRange(new object[] {
+            "ID",
+            "Country Name"});
+            this.comboBoxSearchType.Location = new System.Drawing.Point(108, 10);
+            this.comboBoxSearchType.Name = "comboBoxSearchType";
+            this.comboBoxSearchType.Size = new System.Drawing.Size(189, 24);
+            this.comboBoxSearchType.TabIndex = 6;
+            this.comboBoxSearchType.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearchType_SelectedIndexChanged);
             // 
             // UserControlCountry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBoxSearchType);
+            this.Controls.Add(this.Search);
             this.Controls.Add(this.labelFind);
             this.Controls.Add(this.textBoxCountryName);
             this.Controls.Add(this.textBoxCountryID);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelID);
             this.Name = "UserControlCountry";
-            this.Size = new System.Drawing.Size(334, 126);
+            this.Size = new System.Drawing.Size(334, 158);
+            this.Load += new System.EventHandler(this.UserControlCountry_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,5 +126,7 @@
         private System.Windows.Forms.TextBox textBoxCountryID;
         private System.Windows.Forms.TextBox textBoxCountryName;
         private System.Windows.Forms.Label labelFind;
+        private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.ComboBox comboBoxSearchType;
     }
 }

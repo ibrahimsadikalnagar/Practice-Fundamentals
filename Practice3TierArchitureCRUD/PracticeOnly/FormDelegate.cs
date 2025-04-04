@@ -45,7 +45,12 @@ namespace PracticeOnly
 
         private void FormDelegate_Load(object sender, EventArgs e)
         {
-            UserControlCountry1.LoadCountryData(); 
+            
+        }
+
+        private void userControlCalculate1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

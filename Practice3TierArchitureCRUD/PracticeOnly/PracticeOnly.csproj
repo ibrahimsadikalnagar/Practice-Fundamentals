@@ -59,6 +59,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlCalculate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCalculate.Designer.cs">
+      <DependentUpon>UserControlCalculate.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlCountry.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDelegate.resx">
       <DependentUpon>FormDelegate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlCalculate.resx">
+      <DependentUpon>UserControlCalculate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlCountry.resx">
       <DependentUpon>UserControlCountry.cs</DependentUpon>
