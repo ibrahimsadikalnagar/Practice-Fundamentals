@@ -12,8 +12,10 @@ using System.Windows.Forms;
 
 namespace PracticeOnly
 {
+    
     public partial class FormDelegate : Form
     {
+        Dictionary<string , string > FriutsDiction = new Dictionary<string , string >();    
         UserControlCountry UserControlCountry1;
         
 
@@ -45,12 +47,33 @@ namespace PracticeOnly
 
         private void FormDelegate_Load(object sender, EventArgs e)
         {
-            
+            comboBoxTryDic.Items.Add("Apple");
+            comboBoxTryDic.Items.Add("Bananen");
+            comboBoxTryDic.Items.Add("Orange");
+            comboBoxTryDic.Items.Add("gruips"); 
+
+            FriutsDiction.Add("Apple", "Green Appel");
+            FriutsDiction.Add("Banane", "Geel bananen");
+            FriutsDiction.Add("Orange", "Heel vetemiena C"); 
         }
 
         private void userControlCalculate1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxTryDic_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = comboBoxTryDic.SelectedItem.ToString();
+
+           if(FriutsDiction.TryGetValue(selected , out string description))
+            {
+                MessageBox.Show(description); 
+            }
+           else
+            {
+                labelMetCombo.Text = "That fruit is not found"; 
+            }
         }
     }
 }

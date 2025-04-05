@@ -30,7 +30,9 @@
         {
             this.textBoxForm1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.userControlCountry1 = new PracticeOnly.UserControlCountry();
+            this.comboBoxTryDic = new System.Windows.Forms.ComboBox();
+            this.labelMetCombo = new System.Windows.Forms.Label();
+            this.userControlCountry2 = new PracticeOnly.UserControlCountry();
             this.SuspendLayout();
             // 
             // textBoxForm1
@@ -50,19 +52,40 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // userControlCountry1
+            // comboBoxTryDic
             // 
-            this.userControlCountry1.Location = new System.Drawing.Point(203, 170);
-            this.userControlCountry1.Name = "userControlCountry1";
-            this.userControlCountry1.Size = new System.Drawing.Size(317, 131);
-            this.userControlCountry1.TabIndex = 5;
+            this.comboBoxTryDic.FormattingEnabled = true;
+            this.comboBoxTryDic.Location = new System.Drawing.Point(424, 259);
+            this.comboBoxTryDic.Name = "comboBoxTryDic";
+            this.comboBoxTryDic.Size = new System.Drawing.Size(218, 24);
+            this.comboBoxTryDic.TabIndex = 7;
+            this.comboBoxTryDic.SelectedIndexChanged += new System.EventHandler(this.comboBoxTryDic_SelectedIndexChanged);
+            // 
+            // labelMetCombo
+            // 
+            this.labelMetCombo.AutoSize = true;
+            this.labelMetCombo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMetCombo.Location = new System.Drawing.Point(485, 336);
+            this.labelMetCombo.Name = "labelMetCombo";
+            this.labelMetCombo.Size = new System.Drawing.Size(54, 21);
+            this.labelMetCombo.TabIndex = 8;
+            this.labelMetCombo.Text = "label1";
+            // 
+            // userControlCountry2
+            // 
+            this.userControlCountry2.Location = new System.Drawing.Point(12, 33);
+            this.userControlCountry2.Name = "userControlCountry2";
+            this.userControlCountry2.Size = new System.Drawing.Size(334, 158);
+            this.userControlCountry2.TabIndex = 6;
             // 
             // FormDelegate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.userControlCountry1);
+            this.Controls.Add(this.labelMetCombo);
+            this.Controls.Add(this.comboBoxTryDic);
+            this.Controls.Add(this.userControlCountry2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxForm1);
             this.Name = "FormDelegate";
@@ -76,6 +99,8 @@
         #endregion
         private System.Windows.Forms.TextBox textBoxForm1;
         private System.Windows.Forms.Button button1;
-        private UserControlCountry userControlCountry1;
+        private UserControlCountry userControlCountry2;
+        private System.Windows.Forms.ComboBox comboBoxTryDic;
+        private System.Windows.Forms.Label labelMetCombo;
     }
 }

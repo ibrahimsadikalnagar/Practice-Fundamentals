@@ -12,7 +12,7 @@ namespace PracticeOnly
 {
     public partial class Form2 : Form
     {
-
+        Dictionary<string, Action> action; 
         public delegate void  GetDataBackDelegate(object sender , int PersonID);
        public event GetDataBackDelegate Delegate1;
         public delegate void anotherDataBackDelegate(string PersonName); 
@@ -25,7 +25,20 @@ namespace PracticeOnly
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            comboBoxOption.Items.Add("Hello");
+            comboBoxOption.Items.Add("Goedby"); 
+            action = new Dictionary<string, Action>();
+            action.Add("Hello" , sayHi);
+            action.Add("Goedby" , sayGoedgy);
             
+        }
+        private void sayHi()
+        {
+            MessageBox.Show("Hello , User"); 
+        }
+        private void sayGoedgy()
+        {
+            MessageBox.Show("good , User ");
         }
 
         private void buttonSendBack_Click(object sender, EventArgs e)
@@ -42,6 +55,13 @@ namespace PracticeOnly
 ;
         }
 
-      
+        private void comboBoxOption_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = comboBoxOption.SelectedItem.ToString();
+            if (action.ContainsKey(selected))
+            {
+                action[selected]();
+            }
+        }
     }
 }
