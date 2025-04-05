@@ -75,5 +75,10 @@ namespace PracticeOnly
                 labelMetCombo.Text = "That fruit is not found"; 
             }
         }
+
+        private void userControlCountry2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

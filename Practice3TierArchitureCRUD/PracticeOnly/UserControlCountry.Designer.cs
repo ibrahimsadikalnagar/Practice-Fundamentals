@@ -91,9 +91,6 @@
             // comboBoxSearchType
             // 
             this.comboBoxSearchType.FormattingEnabled = true;
-            this.comboBoxSearchType.Items.AddRange(new object[] {
-            "ID",
-            "Country Name"});
             this.comboBoxSearchType.Location = new System.Drawing.Point(108, 10);
             this.comboBoxSearchType.Name = "comboBoxSearchType";
             this.comboBoxSearchType.Size = new System.Drawing.Size(189, 24);

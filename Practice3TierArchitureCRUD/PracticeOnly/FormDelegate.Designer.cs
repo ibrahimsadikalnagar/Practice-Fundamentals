@@ -55,7 +55,7 @@
             // comboBoxTryDic
             // 
             this.comboBoxTryDic.FormattingEnabled = true;
-            this.comboBoxTryDic.Location = new System.Drawing.Point(424, 259);
+            this.comboBoxTryDic.Location = new System.Drawing.Point(419, 287);
             this.comboBoxTryDic.Name = "comboBoxTryDic";
             this.comboBoxTryDic.Size = new System.Drawing.Size(218, 24);
             this.comboBoxTryDic.TabIndex = 7;
@@ -65,7 +65,7 @@
             // 
             this.labelMetCombo.AutoSize = true;
             this.labelMetCombo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMetCombo.Location = new System.Drawing.Point(485, 336);
+            this.labelMetCombo.Location = new System.Drawing.Point(486, 326);
             this.labelMetCombo.Name = "labelMetCombo";
             this.labelMetCombo.Size = new System.Drawing.Size(54, 21);
             this.labelMetCombo.TabIndex = 8;
@@ -73,10 +73,11 @@
             // 
             // userControlCountry2
             // 
-            this.userControlCountry2.Location = new System.Drawing.Point(12, 33);
+            this.userControlCountry2.Location = new System.Drawing.Point(32, 90);
             this.userControlCountry2.Name = "userControlCountry2";
             this.userControlCountry2.Size = new System.Drawing.Size(334, 158);
             this.userControlCountry2.TabIndex = 6;
+            this.userControlCountry2.Load += new System.EventHandler(this.userControlCountry2_Load);
             // 
             // FormDelegate
             // 

@@ -13,9 +13,23 @@ namespace PracticeOnly
 {
     public partial class UserControlCountry : UserControl
     {
+        public Dictionary<string, Action> searchMethod; 
+        public Dictionary<string, Action> searchTypeAction;
         public UserControlCountry()
         {
             InitializeComponent();
+            searchMethod = new Dictionary<string, Action> // initialize the dictionary 
+            {
+                { "ID", LoadCountryDataByID },
+                { "Country Name", LoadCountryDataByName }
+
+            };
+
+            searchTypeAction = new Dictionary<string, Action>
+            {
+                {"ID" , () => setSearchMode(textBoxCountryID , textBoxCountryName) },
+                {"Country Name" , () => setSearchMode(textBoxCountryName, textBoxCountryID) }
+            };
         }
         public void LoadCountryDataByID()
         {
@@ -47,42 +61,41 @@ namespace PracticeOnly
         }
         private void Search_Click(object sender, EventArgs e)
         {
-            if (comboBoxSearchType.SelectedItem == "ID")
+           string selectedType = comboBoxSearchType.SelectedItem.ToString();
+            if (searchMethod.ContainsKey(selectedType))
             {
-                LoadCountryDataByID();
+                searchMethod[selectedType](); // Run the match method
             }
-            else
-            {
-                LoadCountryDataByName();    
-            }
+            else { MessageBox.Show("Please select  avalid search type "); } 
            
         }
 
         private void UserControlCountry_Load(object sender, EventArgs e)
         {
+            comboBoxSearchType.Items.Add("ID");
+            comboBoxSearchType.Items.Add("Country Name"); 
             comboBoxSearchType.SelectedIndex = 0;
-            textBoxCountryID.Enabled = true;
-            textBoxCountryName.Enabled = false; 
+
+           
+            searchTypeAction["ID"](); 
         }
 
         private void comboBoxSearchType_SelectedIndexChanged(object sender, EventArgs e)
         {
+           string selectedtype = comboBoxSearchType.SelectedItem.ToString();
+            if (searchTypeAction.ContainsKey(selectedtype))
+            {
+                searchTypeAction[selectedtype]();
+            }
+        }
+        private void setSearchMode(TextBox enableTextbox , TextBox disableTextbox)
+        {
             textBoxCountryID.Clear();
             textBoxCountryName.Clear();
-            if(comboBoxSearchType.SelectedItem.ToString() ==  "ID")
-            {
-                comboBoxSearchType.SelectedIndex = 0;
-                textBoxCountryID.Enabled = true;
-                textBoxCountryName.Enabled = false;
-                textBoxCountryID.Focus();
-            }
-            else
-            {
-                comboBoxSearchType.SelectedIndex = 1;
-                textBoxCountryID.Enabled = false;
-                textBoxCountryName.Enabled = true;
-                textBoxCountryName.Focus();
-            }
+            enableTextbox.Enabled = true; 
+                 enableTextbox.Focus();
+
+            disableTextbox.Enabled = false; 
         }
     }
 }
