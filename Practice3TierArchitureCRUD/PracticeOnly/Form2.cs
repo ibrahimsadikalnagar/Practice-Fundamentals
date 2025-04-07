@@ -19,7 +19,9 @@ namespace PracticeOnly
         public event anotherDataBackDelegate Delegate2;
 
         public delegate void SendMessegeDelegate(string message);
-        public SendMessegeDelegate onMessageSend; 
+        public SendMessegeDelegate onMessageSend;
+        public delegate void delegAddCard(string AddCardDeleg);
+        public delegAddCard delACard; 
         public Form2()
         {
             InitializeComponent();
@@ -28,11 +30,7 @@ namespace PracticeOnly
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            comboBoxOption.Items.Add("Hello");
-            comboBoxOption.Items.Add("Goedby"); 
-            action = new Dictionary<string, Action>();
-            action.Add("Hello" , sayHi);
-            action.Add("Goedby" , sayGoedgy);
+            
             
         }
         private void sayHi()
@@ -60,11 +58,7 @@ namespace PracticeOnly
 
         private void comboBoxOption_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selected = comboBoxOption.SelectedItem.ToString();
-            if (action.ContainsKey(selected))
-            {
-                action[selected]();
-            }
+           
         }
 
         private void userControlUseDictionary2_Load(object sender, EventArgs e)
@@ -78,6 +72,11 @@ namespace PracticeOnly
             {
                 onMessageSend("Hello from form2");
             }
+        }
+
+        private void ButtonAddCard_Click(object sender, EventArgs e)
+        {
+            delACard(textBoxAddCard.Text);  
         }
     }
 }
