@@ -87,7 +87,7 @@ namespace PracticeOnly
         private void buttonOpenFrm2_Click(object sender, EventArgs e)
         {
             Form2 frm2 = new Form2();
-            frm2.delACard = AddCardToList;
+            frm2.delACard += AddCardToList;
             frm2.Show();
         }
         private void AddCardToList(string productName)

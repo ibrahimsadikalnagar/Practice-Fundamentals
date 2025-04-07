@@ -20,8 +20,9 @@ namespace PracticeOnly
 
         public delegate void SendMessegeDelegate(string message);
         public SendMessegeDelegate onMessageSend;
+
         public delegate void delegAddCard(string AddCardDeleg);
-        public delegAddCard delACard; 
+        public event delegAddCard delACard; 
         public Form2()
         {
             InitializeComponent();
