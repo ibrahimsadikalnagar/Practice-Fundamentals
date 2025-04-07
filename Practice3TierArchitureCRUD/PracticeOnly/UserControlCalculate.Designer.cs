@@ -87,7 +87,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "UserControlCalculate";
-            this.Size = new System.Drawing.Size(432, 89);
+            this.Size = new System.Drawing.Size(432, 141);
             this.ResumeLayout(false);
             this.PerformLayout();
 

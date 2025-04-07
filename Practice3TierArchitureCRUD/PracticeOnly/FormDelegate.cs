@@ -31,13 +31,16 @@ namespace PracticeOnly
             
         
         }
+        private void showMessage(string message)
+        {
+            MessageBox.Show("form1 got message " + message);
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.Delegate2 += form2_Getdata; 
-            form2.ShowDialog();
-
+            Form2 frm2 = new Form2();
+            frm2.onMessageSend = showMessage;
+            frm2.Show(); 
 
         }
         private void form2_Getdata(string Name )

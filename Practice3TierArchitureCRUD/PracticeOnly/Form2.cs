@@ -17,6 +17,9 @@ namespace PracticeOnly
        public event GetDataBackDelegate Delegate1;
         public delegate void anotherDataBackDelegate(string PersonName); 
         public event anotherDataBackDelegate Delegate2;
+
+        public delegate void SendMessegeDelegate(string message);
+        public SendMessegeDelegate onMessageSend; 
         public Form2()
         {
             InitializeComponent();
@@ -61,6 +64,19 @@ namespace PracticeOnly
             if (action.ContainsKey(selected))
             {
                 action[selected]();
+            }
+        }
+
+        private void userControlUseDictionary2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (onMessageSend != null)
+            {
+                onMessageSend("Hello from form2");
             }
         }
     }

@@ -57,6 +57,18 @@
     <Compile Include="FormDelegate.Designer.cs">
       <DependentUpon>FormDelegate.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDelegate1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDelegate1.Designer.cs">
+      <DependentUpon>FormDelegate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDelegate2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDelegate2.Designer.cs">
+      <DependentUpon>FormDelegate2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControlCalculate.cs">
@@ -71,6 +83,12 @@
     <Compile Include="UserControlCountry.Designer.cs">
       <DependentUpon>UserControlCountry.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlUseDictionary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUseDictionary.Designer.cs">
+      <DependentUpon>UserControlUseDictionary.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -82,11 +100,20 @@
     <EmbeddedResource Include="FormDelegate.resx">
       <DependentUpon>FormDelegate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDelegate1.resx">
+      <DependentUpon>FormDelegate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDelegate2.resx">
+      <DependentUpon>FormDelegate2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlCalculate.resx">
       <DependentUpon>UserControlCalculate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlCountry.resx">
       <DependentUpon>UserControlCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUseDictionary.resx">
+      <DependentUpon>UserControlUseDictionary.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

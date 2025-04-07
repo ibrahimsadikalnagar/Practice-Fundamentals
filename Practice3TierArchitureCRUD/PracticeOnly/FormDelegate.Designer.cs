@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.textBoxForm1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonOpenForm2 = new System.Windows.Forms.Button();
             this.comboBoxTryDic = new System.Windows.Forms.ComboBox();
             this.labelMetCombo = new System.Windows.Forms.Label();
             this.userControlCountry2 = new PracticeOnly.UserControlCountry();
@@ -37,25 +37,25 @@
             // 
             // textBoxForm1
             // 
-            this.textBoxForm1.Location = new System.Drawing.Point(359, 22);
+            this.textBoxForm1.Location = new System.Drawing.Point(412, 28);
             this.textBoxForm1.Name = "textBoxForm1";
             this.textBoxForm1.Size = new System.Drawing.Size(123, 24);
             this.textBoxForm1.TabIndex = 3;
             // 
-            // button1
+            // buttonOpenForm2
             // 
-            this.button1.Location = new System.Drawing.Point(551, 59);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 46);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Send to Form2";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonOpenForm2.Location = new System.Drawing.Point(551, 284);
+            this.buttonOpenForm2.Name = "buttonOpenForm2";
+            this.buttonOpenForm2.Size = new System.Drawing.Size(147, 46);
+            this.buttonOpenForm2.TabIndex = 4;
+            this.buttonOpenForm2.Text = "Send to Form2";
+            this.buttonOpenForm2.UseVisualStyleBackColor = true;
+            this.buttonOpenForm2.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBoxTryDic
             // 
             this.comboBoxTryDic.FormattingEnabled = true;
-            this.comboBoxTryDic.Location = new System.Drawing.Point(419, 287);
+            this.comboBoxTryDic.Location = new System.Drawing.Point(551, 138);
             this.comboBoxTryDic.Name = "comboBoxTryDic";
             this.comboBoxTryDic.Size = new System.Drawing.Size(218, 24);
             this.comboBoxTryDic.TabIndex = 7;
@@ -65,7 +65,7 @@
             // 
             this.labelMetCombo.AutoSize = true;
             this.labelMetCombo.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMetCombo.Location = new System.Drawing.Point(486, 326);
+            this.labelMetCombo.Location = new System.Drawing.Point(626, 188);
             this.labelMetCombo.Name = "labelMetCombo";
             this.labelMetCombo.Size = new System.Drawing.Size(54, 21);
             this.labelMetCombo.TabIndex = 8;
@@ -73,7 +73,7 @@
             // 
             // userControlCountry2
             // 
-            this.userControlCountry2.Location = new System.Drawing.Point(32, 90);
+            this.userControlCountry2.Location = new System.Drawing.Point(19, 51);
             this.userControlCountry2.Name = "userControlCountry2";
             this.userControlCountry2.Size = new System.Drawing.Size(334, 158);
             this.userControlCountry2.TabIndex = 6;
@@ -87,7 +87,7 @@
             this.Controls.Add(this.labelMetCombo);
             this.Controls.Add(this.comboBoxTryDic);
             this.Controls.Add(this.userControlCountry2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonOpenForm2);
             this.Controls.Add(this.textBoxForm1);
             this.Name = "FormDelegate";
             this.Text = "FormDelegate";
@@ -99,7 +99,7 @@
 
         #endregion
         private System.Windows.Forms.TextBox textBoxForm1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonOpenForm2;
         private UserControlCountry userControlCountry2;
         private System.Windows.Forms.ComboBox comboBoxTryDic;
         private System.Windows.Forms.Label labelMetCombo;

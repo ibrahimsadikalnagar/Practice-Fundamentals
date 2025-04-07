@@ -31,6 +31,9 @@
             this.textBoxDataReturn = new System.Windows.Forms.TextBox();
             this.buttonSendBack = new System.Windows.Forms.Button();
             this.comboBoxOption = new System.Windows.Forms.ComboBox();
+            this.userControlUseDictionary2 = new PracticeOnly.UserControlUseDictionary();
+            this.userControlCalculate1 = new PracticeOnly.UserControlCalculate();
+            this.buttonReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxDataReturn
@@ -59,11 +62,39 @@
             this.comboBoxOption.TabIndex = 3;
             this.comboBoxOption.SelectedIndexChanged += new System.EventHandler(this.comboBoxOption_SelectedIndexChanged);
             // 
+            // userControlUseDictionary2
+            // 
+            this.userControlUseDictionary2.Location = new System.Drawing.Point(271, 150);
+            this.userControlUseDictionary2.Name = "userControlUseDictionary2";
+            this.userControlUseDictionary2.Size = new System.Drawing.Size(327, 204);
+            this.userControlUseDictionary2.TabIndex = 5;
+            this.userControlUseDictionary2.Load += new System.EventHandler(this.userControlUseDictionary2_Load);
+            // 
+            // userControlCalculate1
+            // 
+            this.userControlCalculate1.Location = new System.Drawing.Point(671, 150);
+            this.userControlCalculate1.Name = "userControlCalculate1";
+            this.userControlCalculate1.Size = new System.Drawing.Size(432, 141);
+            this.userControlCalculate1.TabIndex = 6;
+            // 
+            // buttonReturn
+            // 
+            this.buttonReturn.Location = new System.Drawing.Point(764, 320);
+            this.buttonReturn.Name = "buttonReturn";
+            this.buttonReturn.Size = new System.Drawing.Size(120, 62);
+            this.buttonReturn.TabIndex = 7;
+            this.buttonReturn.Text = "Return Form1 and close";
+            this.buttonReturn.UseVisualStyleBackColor = true;
+            this.buttonReturn.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1136, 450);
+            this.Controls.Add(this.buttonReturn);
+            this.Controls.Add(this.userControlCalculate1);
+            this.Controls.Add(this.userControlUseDictionary2);
             this.Controls.Add(this.comboBoxOption);
             this.Controls.Add(this.buttonSendBack);
             this.Controls.Add(this.textBoxDataReturn);
@@ -79,5 +110,8 @@
         private System.Windows.Forms.TextBox textBoxDataReturn;
         private System.Windows.Forms.Button buttonSendBack;
         private System.Windows.Forms.ComboBox comboBoxOption;
+        private UserControlUseDictionary userControlUseDictionary2;
+        private UserControlCalculate userControlCalculate1;
+        private System.Windows.Forms.Button buttonReturn;
     }
 }
