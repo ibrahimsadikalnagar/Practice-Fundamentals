@@ -87,7 +87,7 @@ namespace DAL
         {
             DataTable dt = new DataTable();
             SqlConnection conn = new SqlConnection(ClassConnections.ConnectDataUser);
-            string query = "Select * from Users";
+            string query = "Select * from Contacts";
             SqlCommand cmd = new SqlCommand(query, conn);
             try
             {
