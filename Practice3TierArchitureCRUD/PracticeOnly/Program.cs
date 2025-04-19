@@ -20,9 +20,8 @@ namespace PracticeOnly
 
             
 
-                FormDelegate1 fD = new FormDelegate1();
-                 fD.ShowDialog();
-            
+                Form1 frm1 = new Form1();   
+            frm1.ShowDialog();
 
         }
  

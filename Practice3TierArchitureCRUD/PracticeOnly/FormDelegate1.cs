@@ -19,7 +19,7 @@ namespace PracticeOnly
            
             CountryAction = new Dictionary<string, Action>
             {
-                { "NL" , NL },
+                { "NL" , () => MessageBox.Show("HAllo Nederland") },
                 {  "AR" , () => MessageBox.Show("Hello in Arabic world") },
                 {"EN" , () => MessageBox.Show("Hello in english")}
             };
